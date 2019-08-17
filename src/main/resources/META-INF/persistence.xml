@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="TimeRegDS" transaction-type="JTA">
+<!--        <jta-data-source>java:/ds</jta-data-source>
+
+        <class>nl.mumasoft.model.Client</class>
+        <class>nl.mumasoft.model.Project</class>
+        <class>nl.mumasoft.model.Task</class>
+        <class>nl.mumasoft.model.TaskEntry</class>
+
+ -->
+        <!-- Hibernate properties -->
+        <properties>
+            <!--<property name="hibernate.show_sql" value="${hibernate.show_sql}"/>-->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <!-- Set to "validate" when using in production! -->
+            <!-- See also: http://stackoverflow.com/a/1689769/578745 -->
+            <!--<property name="hibernate.hbm2ddl.auto" value="${hibernate.hbm2ddl.auto}"/>-->
+            <!--<property name="hibernate.hbm2ddl.auto" value="create"/>-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect"/>
+        </properties>
+
+    </persistence-unit>
+</persistence>
